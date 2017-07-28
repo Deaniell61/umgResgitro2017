@@ -1,0 +1,262 @@
+html,body{
+
+margin:0px;
+
+height:100%;
+
+}
+footer{
+        position: fixed;
+    text-align: right;
+    width: 100%;
+    bottom: 0px;
+    font-size: 15px;
+
+}
+
+    html{
+     background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3b/20/7c/3b207c471236743ea2f5e7d41fd576f3.png");
+     background-size: 30% 100%;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+     background-attachment: fixed;
+    }
+    .center{
+        position: absolute;
+        top: 2%;
+        left: 30%;
+        width: 70%;
+    }
+    .gen{
+        width: 100%;
+        
+    }
+    .sli{
+        height: 200px;
+    }
+    .logo{
+            width: 50%;
+    float: right;
+    text-align: center;
+    padding: 0px;
+    height: 30%;
+    }
+    .logo .umg{
+        width: 300px;
+        height: 270px;
+    }
+    .logo .actividad{
+        width: 70%;
+        height: 20%;
+        margin-top: 50px;
+    }
+
+    .icono{
+        width: 45px;
+        height: 45px;
+    }
+
+    .iconoG{
+        margin-top: 3px;
+        width: 30px;
+        height: 30px;
+    }
+    .letra24{
+        font-size: 24px;
+    }
+    .parrafo{
+        font-size: 24px;
+    text-align: center;
+    width: 90%;
+    }
+    .parrafo p{
+        padding: 0px;
+        margin: 0px;
+    }
+    .logoSel{
+        margin-left: -48%;
+    }
+
+@media (max-height:600px){
+footer{
+        position: fixed;
+    text-align: right;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+
+}
+}
+
+
+
+@media (min-width:100px) and (max-width:699px)
+{
+    footer{
+        position: fixed;
+    text-align: right;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+
+    }
+    html{
+     background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3b/20/7c/3b207c471236743ea2f5e7d41fd576f3.png");
+     background-size: 35% 100%;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+     background-attachment: fixed;
+    }
+    
+
+    .center{
+        position: absolute;
+        top: 2%;
+        left: 25%;
+        width: 50%;
+    }
+    .gen{
+            position: relative;
+    float: right;
+    width: 90%;
+    align-content: center;
+        
+    }
+    .logo{
+          
+            width: 90%;
+    float: right;
+
+    }
+    .logo .umg{
+        width: 150px;
+    height: 130px;
+    }
+    .logo .actividad{
+        width: 100%;
+        height: 50%;
+        margin-top: 7%;
+    }
+    .icono{
+        width: 20px;
+        height: 20px;
+    }
+
+    .iconoG{
+        margin-top: 3px;
+        width: 15px;
+        height: 15px;
+    }
+    .letra24{         
+        font-size: 24px;     
+    }     
+    .parrafo{
+        font-size: 10px;
+    }
+    .parrafo p{
+        margin: 0px;
+    }
+    .row .col.s6 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    }
+    .input-field {
+    position: relative;
+    margin-top: 0px;
+    }
+    .sli{
+        height: 100px;
+    }
+}
+
+@media (min-width:700px) and (max-width:799px)
+{
+
+    html{
+     background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3b/20/7c/3b207c471236743ea2f5e7d41fd576f3.png");
+     background-size: 35% 100%;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+     background-attachment: fixed;
+    }
+
+    .center{
+        position: absolute;
+        top: 2%;
+        left: 25%;
+        width: 50%;
+    }
+    .gen{
+            position: relative;
+    float: right;
+    width: 90%;
+    align-content: center;
+        
+    }
+    .logo{
+          
+            width: 90%;
+    float: right;
+
+    }
+    .logo .umg{
+        width: 150px;
+    height: 130px;
+    }
+    .logo .actividad{
+        width: 100%;
+        height: 50%;
+        margin-top: 7%;
+    }
+    .icono{
+        width: 20px;
+        height: 20px;
+    }
+
+    .iconoG{
+        margin-top: 3px;
+        width: 15px;
+        height: 15px;
+    }
+    .letra24{         
+        font-size: 24px;     
+    }     
+    .parrafo{
+        font-size: 10px;
+    }
+    .parrafo p{
+        margin: 0px;
+    }
+    .row .col.s6 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    }
+    .input-field {
+    position: relative;
+    margin-top: 0px;
+    }
+    .sli{
+        height: 100px;
+    }
+}
+
+
+@media (min-width:700px) and (max-width:900px){
+    .letra24{         
+        font-size: 24px;     
+    }     
+    .parrafo{
+        font-size: 15px;
+    text-align: center;
+    width: 90%;
+    }
+    .sli{
+        height: 100px;
+    }
+}
