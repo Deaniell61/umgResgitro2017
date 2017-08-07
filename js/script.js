@@ -25,19 +25,49 @@ $(".dropdown-button").dropdown();
 llenaInscritos();
 
   function GuardarDatos(){
-    var nombre=$("#nombre").val();
-    var apellido=$("#apellido").val();
+    
  /*   var telefono=$("#telefono").val();
     var correo=$("#correo").val();
     var carrera=$("#carrera").val();
     var colegio=$("#colegio").val();*/
     var face=$("#codigoRR").val();
-    var talla=$("#playera").val();
-    var Estudiante=$('#Estudiante').val();
     verificaClave(face);
     //verifica(document.getElementById('correo'));
+       
+}
+
+function verifica(email){
+    emai=email.value;
+    $.ajax
+        ({
+            async:false,    
+            cache:false,  
+            type:"POST",
+            data:' emai=' +  emai + '&tipo=1',
+            dataType: 'json',
+            url:"php/ingresoDatos.php",
+            success: function(resp)
+            {
+				if(resp['estatus']=='1'){
+                    email.style.border='green';
+                    permite=1;
+                }else{
+                    email.style.border='red';
+                    permite=0;
+                }
+                
+            } 
+        });
+}
+
+function operacion2(face)
+{
     permite = 1
-    setTimeout(function(){
+    
+    var nombre=$("#nombre").val();
+    var apellido=$("#apellido").val();
+    var talla=$("#playera").val();
+    var Estudiante=$('#Estudiante').val();
     if(nombre!="" && apellido!="" && talla!="" && Estudiante!="" && face!=""){
         if(permite){
             if(permite2){
@@ -104,33 +134,7 @@ llenaInscritos();
                 });
                 
         }
-    },300);
 }
-
-function verifica(email){
-    emai=email.value;
-    $.ajax
-        ({
-            async:false,    
-            cache:false,  
-            type:"POST",
-            data:' emai=' +  emai + '&tipo=1',
-            dataType: 'json',
-            url:"php/ingresoDatos.php",
-            success: function(resp)
-            {
-				if(resp['estatus']=='1'){
-                    email.style.border='green';
-                    permite=1;
-                }else{
-                    email.style.border='red';
-                    permite=0;
-                }
-                
-            } 
-        });
-}
-
 function verificaClave(clave){
     var respuesta='';
     $.ajax
@@ -145,6 +149,16 @@ function verificaClave(clave){
             {
 			    if(resp['estatus']=='1'){
                     permite2=1;
+                    operacion2(clave);
+                }else{
+                    notif({
+                            type: "error",
+                            msg: "El codigo no esta Disponible",
+                            position: "center",
+                            fade: false,
+                            autohide: false
+                        });
+                        $('#correo').focus();
                 }
             } 
         });
