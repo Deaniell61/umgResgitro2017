@@ -41,6 +41,8 @@ require_once('conf.php');
                         $sql="insert into estudiante(nombre,apellido,facebook,estudiante,talla,clave) values('".$dato[0]."','".$dato[1]."','".$dato[6]."','".$dato[7]."','".$dato[8]."','".$dato[9]."')";
                         $ejecuta=$mySQL->query($sql);
                     if($ejecuta){
+                        $sql1="update codigos set estado=0 where clave='".$dato[9]."' and estado=1";
+                        $mySQL->query($sql1);
                         $retur['estatus'] = "1";
                     }
                     else{
@@ -59,8 +61,7 @@ require_once('conf.php');
                         $ejecuta=$mySQL->query($sql);
                     if($ejecuta){
                         if($ejecuta->num_rows>0){
-                            $sql="update codigos set estado=0 where clave='".$dato[0]."' and estado=1";
-                                $mySQL->query($sql);
+                            
                                 $retur['estatus'] = "1";
                             
                         }
